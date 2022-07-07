@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState, useEffect, useContext, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { createContext } from 'react'
 import './App.css'
 
@@ -54,14 +54,15 @@ const ButtonSearch = () => {
   useOutsideAlerter(wrapperRef);
 
   function handleClick () {
-    // console.log(padd)
-    // console.log(visibleInp)
     setPadd(false)
     setVisibleBTN(false)
     setVisibleInp(true)
-    // console.log(padd)
   }
 
+  /**
+   * 
+   * Hàm xử lí sự kiện click ngoài input
+   */
   function useOutsideAlerter(ref) {
     //ref 
     useEffect(() => {
