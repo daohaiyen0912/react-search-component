@@ -8,24 +8,15 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 
 export const ThemeContext = createContext()
 
+/**
+ * Phần nhập search input
+ */
 const InputSearch = (props) => {
   // console.log(props.padding)
   var paddClass = props.padding ? 'btn-search' : 'add-padding'
   
   return (
     <div className="input-search" ref={props.wrapperRef}>
-      {/* <form>
-        {/* <button className={paddClass} >
-          <FontAwesomeIcon icon={faSearch} />
-        </button> 
-        <input 
-          type="text" 
-          placeholder="Search..."
-          name="search"
-          autoFocus={true}
-        >
-        </input>
-      </form> */}
       <form class="nosubmit">
         <input class="nosubmit" type="search" placeholder="Search..." autoFocus={true}>
         </input>
@@ -34,8 +25,12 @@ const InputSearch = (props) => {
   )
 }
 
+/**
+ * button search ban đầu
+ */
 const BTNSearch = (props) => {
   console.log(props.padding)
+  //paddClass xác định xem icon search thuộc button cũ hay trong input
   var paddClass = props.padding ? 'btn-search' : 'add-padding'
   return (
     <button 
@@ -47,6 +42,9 @@ const BTNSearch = (props) => {
   )
 }
 
+/**
+ * Component chính chứa cả button và input
+ */
 const ButtonSearch = () => {
   const [visibleBTN, setVisibleBTN] = useState(true)
   const [visibleInp, setVisibleInp] = useState(false)
@@ -65,20 +63,20 @@ const ButtonSearch = () => {
   }
 
   function useOutsideAlerter(ref) {
+    //ref 
     useEffect(() => {
       /**
-       * Alert if clicked on outside of element
+       * Xử lý sự kiện khi click ngoài input search
        */
       function handleClickOutside(event) {
         if (ref.current && !ref.current.contains(event.target)) {
           setPadd(true)
           setVisibleBTN(true)
           setVisibleInp(false)
-          // alert("You clicked outside of me!");
-
+          // alert("You clicked outside of me!")
         }
       }
-      // Bind the event listener
+      // Bind the event listener - lắng nghe sự kiện con trỏ -> truyền vào handleClickOutside
       document.addEventListener("mousedown", handleClickOutside);
       return () => {
         // Unbind the event listener on clean up
