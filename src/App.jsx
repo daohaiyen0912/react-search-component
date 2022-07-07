@@ -14,16 +14,20 @@ const InputSearch = (props) => {
   
   return (
     <div className="input-search" ref={props.wrapperRef}>
-      <form>
-        <button className={paddClass} >
+      {/* <form>
+        {/* <button className={paddClass} >
           <FontAwesomeIcon icon={faSearch} />
-        </button>
+        </button> 
         <input 
           type="text" 
           placeholder="Search..."
           name="search"
           autoFocus={true}
         >
+        </input>
+      </form> */}
+      <form class="nosubmit">
+        <input class="nosubmit" type="search" placeholder="Search..." autoFocus={true}>
         </input>
       </form>
     </div>
