@@ -1,0 +1,115 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button {
+  font-size: calc(10px + 2vmin);
+}
+
+.dark {
+  background-color: #282c34;
+  color: white;
+}
+
+.btn-search {
+  padding: 100px;
+
+  background-color: white;
+  border: none;
+
+  font-size: 15px;
+}
+.add-padding {
+  padding: 0px 15px;
+  background-color: white;
+  border: none;
+
+  font-size: 15px;
+}
+.btn-search:hover {
+  cursor: pointer;
+}
+.input-search {
+  padding: 93px;
+
+}
+/*.input-search input {
+  outline: none !important;
+  border: 0.5px solid cadetblue;
+  border-radius: 5px;
+
+  /* background-image: url();
+  background-repeat: no-repeat;
+  background-position: 280px; 
+
+  -webkit-transition: width .35s ease-in-out;
+  transition: width .35s ease-in-out;
+  height: 25px;
+  width: 0px;
+}*/
+/* .input-search input:focus {
+  outline: none !important;
+  border: 0.5px solid cadetblue;
+  border-radius: 5px;
+
+  background-color: rgb(231, 231, 231);
+
+  width: 300px;
+} */
+.input-search input {
+  padding: 10px;
+
+  outline: none !important;
+  border: 0px solid cadetblue;
+}
+.input-search input::placeholder {
+  color: #bbb;
+}
+form {
+  color: #555;
+  display: flex;
+  border: 0.5px solid cadetblue;
+  width: 500px;
+
+  -webkit-transition: width .35s ease-in-out;
+  transition: width .35s ease-in-out;
+}
+
+form::after {
+  width: 1000px;
+}
